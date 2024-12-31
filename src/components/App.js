@@ -1,13 +1,13 @@
-
 import React from "react";
-import './../styles/App.css';
-
-const App = () => {
+import { connect } from "react-redux";
+import MainPage from "./View/main";
+const App = (props) => {
   return (
-    <div>
-        {/* Do not remove the main div */}
+    <div className="App">
+      <MainPage />
     </div>
-  )
-}
+  );
+};
+const mapStateToProps = (state) => ({});
 
-export default App
+export default connect(mapStateToProps, {})(App);
